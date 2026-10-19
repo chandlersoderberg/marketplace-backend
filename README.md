@@ -1,4 +1,4 @@
-# Marketplace Backend Implementation
+# Marketplace Backend
 
 This project is a dedicated **Backend API** built using Node.js, Express, and MongoDB. It strictly follows the **MVC (Model-View-Controller)** architectural pattern. My primary focus while building this was to ensure **clean, readable code**, **robust exception handling**, and **security** – exactly what you'd expect in a production-ready environment.
 
@@ -50,7 +50,7 @@ Clone the repository and install the dependencies:
 
 ```bash
 git clone <your-repo-link>
-cd Marketplace
+cd marketplace-backend
 npm install
 ```
 
@@ -62,7 +62,7 @@ Create a `.env` file in the root directory and add the following keys. (You can 
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/marketplace_db
 JWT_SECRET=super_secret_jwt_key_marketplace
-DEFAULT_ADMIN_EMAIL=admin@marketplace.com
+DEFAULT_ADMIN_EMAIL=admin@marketplace.local
 DEFAULT_ADMIN_PASSWORD=admin123
 ```
 
@@ -88,7 +88,7 @@ Testing APIs can sometimes be tedious, so here is a step-by-step guide to testin
 
 1. **Admin Login:**
    - `POST http://localhost:5000/api/admin/login`
-   - **Body (JSON):** `{"email": "admin@marketplace.com", "password": "admin123"}`
+   - **Body (JSON):** `{"email": "admin@marketplace.local", "password": "admin123"}`
    - _Action:_ Copy the `token` from the response.
 2. **Create Seller:**
    - `POST http://localhost:5000/api/admin/sellers`

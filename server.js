@@ -38,7 +38,7 @@ app.use(errorHandler);
 // Helper function to seed default Admin if not exists
 const seedDefaultAdmin = async () => {
   try {
-    const adminEmail = process.env.DEFAULT_ADMIN_EMAIL || 'admin@marketplace.com';
+    const adminEmail = process.env.DEFAULT_ADMIN_EMAIL || 'admin@marketplace.local';
     const adminPassword = process.env.DEFAULT_ADMIN_PASSWORD || 'admin123';
 
     const existingAdmin = await Admin.findOne({ email: adminEmail });
